@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+std::string getEra(int year) {
+    if (year >= 4500) {
+        return "катархей";
+    }
+    else if (year >= 3500) {
+        return "архей";
+    }
+    else if (year >= 2500) {
+        return "протерозой";
+    }
+    else if (year >= 542) {
+        return "палеозой";
+    }
+    else if (year >= 248) {
+        return "мезозой";
+    }
+    else if (year >= 65) {
+        return "кайнозой";
+    }
+    else {
+        return "некорректный год";
+    }
+}
+
+int main() {
+    int year;
+    std::cout << "Введите год (млн. лет назад): ";
+    std::cin >> year;
+
+    std::string era = getEra(year);
+    std::cout << "Эра: " << era << std::endl;
+
+    return 0;
+}
