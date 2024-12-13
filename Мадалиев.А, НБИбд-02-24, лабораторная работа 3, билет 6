@@ -1,0 +1,14 @@
+def get_card_rank(number):
+    if 2 <= number <= 10:
+        return str(number)
+    elif number == 11:
+        return "валет"
+    elif number == 12:
+        return "дама"
+    elif number == 13:
+        return "король"
+    elif number == 14:
+        return "туз"
+    else:
+        return "неизвестный номер"
+print(get_card_rank(11))
