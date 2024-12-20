@@ -1,0 +1,30 @@
+#include <iostream>
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int main() {
+    int t, p;
+    std::cout << "Введите числитель (t): ";
+    std::cin >> t;
+    std::cout << "Введите знаменатель (p): ";
+    std::cin >> p;
+    if (p == 0) {
+        std::cout << "Знаменатель не может быть равен нулю." << std::endl;
+        return 1;
+    }
+    
+    int divisor = gcd(t, p);
+
+    t /= divisor;
+    p /= divisor;
+
+    std::cout << "Сокращенная дробь: " << t << "/" << p << std::endl;
+
+    return 0;
+}    
