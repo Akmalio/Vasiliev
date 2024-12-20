@@ -1,0 +1,10 @@
+def total_work_time(p, t):
+    total_time = 0
+    for i in range(p):
+        current_time = t + (i * (10 / 60)) 
+        total_time += current_time
+    return total_time
+p = int(input("Введите количество сенокосилок (p): "))
+t = float(input("Введите время работы первой сенокосилки в часах (t): "))
+total_hours = total_work_time(p, t)
+print(f"Вся бригада проработала {total_hours:.2f} часов.")
