@@ -1,0 +1,43 @@
+m = int(input("Введите числитель дроби (m): "))
+n = int(input("Введите знаменатель дроби (n): "))
+
+# Алгоритм Евклида для нахождения НОД (цикл с предусловием)
+a, b = m, n
+while b != 0:
+    a, b = b, a % b
+
+# a - НОД
+gcd = a
+
+# Сокращаем дробь
+m_simplified = m // gcd
+n_simplified = n // gcd
+
+print(f"Сокращенная дробь: {m_simplified}/{n_simplified}")
+
+
+
+
+
+
+
+
+m = int(input("Введите числитель дроби (m): "))
+n = int(input("Введите знаменатель дроби (n): "))
+
+# Алгоритм Евклида для нахождения НОД (цикл с постусловием)
+a, b = m, n
+while True:
+    remainder = a % b
+    a, b = b, remainder
+    if b == 0:  # Условие выхода из цикла
+        break
+
+# a - НОД
+gcd = a
+
+# Сокращаем дробь
+m_simplified = m // gcd
+n_simplified = n // gcd
+
+print(f"Сокращенная дробь: {m_simplified}/{n_simplified}")
